@@ -3,9 +3,9 @@ import React from "react";
 export default function NavBar() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg ">
+      <nav className="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-body rounded">
         <a className="navbar-brand" href="h">
-          Navbar
+          Food!Zone
         </a>
         <button
           className="navbar-toggler"
@@ -20,7 +20,7 @@ export default function NavBar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
-            <li className="nav-item active">
+            <li className="nav-item">
               <a className="nav-link" href="h">
                 Login
               </a>
