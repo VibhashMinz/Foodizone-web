@@ -1,5 +1,4 @@
 const express = require("express");
-
 const Meal = require("./models/mealModel");
 
 const app = express();
@@ -12,7 +11,13 @@ app.get("/", (req, res) => {
 });
 
 app.get("/getmeals", (req, res) => {
-  res.send();
+  Meal.find({}, (err, data) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(data);
+    }
+  });
 });
 
 const port = process.env.PORT || 8000;
